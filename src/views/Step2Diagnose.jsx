@@ -4,16 +4,24 @@ import SicarService from '../services/sicar';
 const Step2Diagnose = ({ producer, property, setProperty, nextStep, prevStep }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [isDemo, setIsDemo] = useState(false);
 
   useEffect(() => {
     async function loadSicarData() {
       try {
-        const sicar = new SicarService();
-        // Fetch properties (this uses the mock implementation in sicar.js)
+        // Instancia o serviço (demoMode: true é o padrão no hackathon)
+        const sicar = new SicarService({ demoMode: true });
+
+        // Etapa 1: Autenticação com o gateway Dataprev
+        await sicar.authenticate('jornada-car-facil', 'hackathon-2026');
+
+        // Etapa 2: Consulta de imóveis pelo CPF do produtor
         const properties = await sicar.getPropertiesByCPF(producer.cpf || '12345678901');
+
+        // Rastreia se os dados vieram do mock
+        setIsDemo(sicar.isDemoMode());
         
         if (properties && properties.length > 0) {
-          // Select the first property found
           const p = properties[0];
           setProperty({
             name: p.name,
@@ -54,9 +62,11 @@ const Step2Diagnose = ({ producer, property, setProperty, nextStep, prevStep }) 
       {error && <div style={styles.errorBanner}>{error}</div>}
 
       <div className="gov-card" style={styles.card}>
-        <div style={styles.demoNotice}>
-          🧪 <strong>DADOS DEMO:</strong> As informações abaixo foram carregadas do banco de simulação do haCARthon para demonstração.
-        </div>
+        {isDemo && (
+          <div style={styles.demoNotice}>
+            🧪 <strong>DADOS DEMO:</strong> Autenticação simulada. Informações carregadas do banco de demonstração do haCARthon. Em produção, estes dados virão da API real do SICAR/Dataprev.
+          </div>
+        )}
         <div style={styles.row}>
           <span style={styles.label}>Nome do Sítio:</span>
           <strong style={styles.val}>{property.name}</strong>
