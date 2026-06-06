@@ -69,6 +69,9 @@ const Step1Welcome = ({ producer, setProducer, nextStep }) => {
 
   return (
     <div className="step-container">
+      <div className="gov-demo-banner">
+        🧪 <strong>Modo de Simulação Ativo:</strong> Insira qualquer CPF (ex: 123.456.789-00) para simular o acesso com dados de demonstração.
+      </div>
       <h2 className="step-title">Bem-vindo, Produtor!</h2>
       <p className="step-description">
         O jeito mais simples e rápido de deixar o seu sítio em dia com as leis ambientais.

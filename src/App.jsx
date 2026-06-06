@@ -130,7 +130,9 @@ function App() {
       <header className="gov-header">
         <div className="gov-header-bar">
           <span className="gov-logo-text">gov<span className="gov-logo-dot">.br</span></span>
-          <span className="gov-app-title">Cadastro Ambiental Rural</span>
+          <span className="gov-app-title">
+            Cadastro Ambiental Rural <span className="gov-demo-badge">Demo / Simulador</span>
+          </span>
         </div>
         {isOffline && (
           <div className="gov-offline-banner">

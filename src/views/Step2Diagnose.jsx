@@ -54,6 +54,9 @@ const Step2Diagnose = ({ producer, property, setProperty, nextStep, prevStep }) 
       {error && <div style={styles.errorBanner}>{error}</div>}
 
       <div className="gov-card" style={styles.card}>
+        <div style={styles.demoNotice}>
+          🧪 <strong>DADOS DEMO:</strong> As informações abaixo foram carregadas do banco de simulação do haCARthon para demonstração.
+        </div>
         <div style={styles.row}>
           <span style={styles.label}>Nome do Sítio:</span>
           <strong style={styles.val}>{property.name}</strong>
@@ -116,6 +119,16 @@ const styles = {
   card: {
     borderLeft: '4px solid #138013',
     padding: '20px'
+  },
+  demoNotice: {
+    backgroundColor: '#e3f2fd',
+    borderLeft: '4px solid #1565c0',
+    padding: '8px 12px',
+    borderRadius: '4px',
+    fontSize: '11px',
+    color: '#1565c0',
+    marginBottom: '15px',
+    textAlign: 'left'
   },
   row: {
     display: 'flex',

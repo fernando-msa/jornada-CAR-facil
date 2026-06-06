@@ -58,6 +58,12 @@ export async function generateCarReportPDF(data) {
   doc.setTextColor(...DARK_TEXT);
   doc.setFontSize(20);
   doc.text('Jornada CAR Fácil', 15, 28);
+
+  // Demo Badge
+  doc.setTextColor(180, 50, 50);
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'bold');
+  doc.text('[PROTÓTIPO DEMO - HACKATHON]', 85, 28);
   
   // Subtitle
   doc.setFontSize(10);
