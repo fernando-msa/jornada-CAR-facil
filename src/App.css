@@ -1,0 +1,204 @@
+/* Custom CSS stylesheet following gov.br DS guidelines */
+
+:root {
+  --gov-blue-primary: #0033c6;
+  --gov-blue-dark: #002288;
+  --gov-green-primary: #138013;
+  --gov-green-light: #e8f5e9;
+  --gov-charcoal: #212529;
+  --gov-gray-bg: #f8f9fa;
+  --gov-border: #dcdfe6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--gov-charcoal);
+  background-color: var(--gov-gray-bg);
+}
+
+.gov-app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Header Styles */
+.gov-header {
+  background-color: var(--gov-blue-primary);
+  color: #ffffff;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gov-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gov-logo-text {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.gov-logo-dot {
+  color: #ffcc00; /* Yellow dot */
+}
+
+.gov-app-title {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.gov-offline-banner {
+  background-color: #ff9800;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Progress bar section */
+.gov-progress-section {
+  padding: 15px 15px 5px 15px;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--gov-border);
+}
+
+.gov-progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.gov-step-name {
+  font-weight: bold;
+  color: var(--gov-blue-primary);
+}
+
+.gov-progress-track {
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.gov-progress-bar {
+  height: 100%;
+  background-color: var(--gov-green-primary);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Main Content Area */
+.gov-main-content {
+  flex-grow: 1;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common View Styles */
+.step-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gov-blue-primary);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.gov-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  transition: transform 0.1s ease, filter 0.1s ease;
+}
+
+.gov-btn:active {
+  transform: scale(0.98);
+}
+
+.gov-btn-primary {
+  background-color: var(--gov-blue-primary);
+  color: #ffffff;
+}
+
+.gov-btn-success {
+  background-color: var(--gov-green-primary);
+  color: #ffffff;
+}
+
+.gov-btn-secondary {
+  background-color: #ffffff;
+  color: var(--gov-blue-primary);
+  border: 1px solid var(--gov-blue-primary);
+}
+
+.gov-btn-disabled {
+  background-color: #e0e0e0;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+/* Cards */
+.gov-card {
+  background-color: #ffffff;
+  border: 1px solid var(--gov-border);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Footer */
+.gov-footer {
+  background-color: #f1f2f5;
+  padding: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #666666;
+  border-top: 1px solid var(--gov-border);
+}
+
+.gov-footer p {
+  margin: 0 0 5px 0;
+  font-weight: 500;
+}
+.gov-footer small {
+  display: block;
+  color: #999999;
+}
