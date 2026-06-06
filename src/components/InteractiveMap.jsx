@@ -232,7 +232,7 @@ const styles = {
     left: '50px',
     right: '10px',
     backgroundColor: '#FFF2CC',
-    border: '1px solid '#F1C232',
+    border: '1px solid #F1C232',
     color: '#7F6000',
     padding: '10px 15px',
     borderRadius: '4px',
