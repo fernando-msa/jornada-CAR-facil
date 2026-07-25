@@ -11,7 +11,7 @@
   "dependencies": {
     "@geoman-io/leaflet-geoman-free": "^2.14.0",
     "@turf/turf": "^6.5.0",
-    "jspdf": "^2.5.1",
+    "jspdf": "^4.2.1",
     "jspdf-autotable": "^3.8.2",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",
@@ -21,6 +21,6 @@
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
-    "vite": "^4.4.5"
+    "vite": "^8.0.16"
   }
 }
